@@ -1,0 +1,2 @@
+# LMAC_CORE3
+Ethernet MAC IP Core for 100G/50G/40G/25G/10Gbps

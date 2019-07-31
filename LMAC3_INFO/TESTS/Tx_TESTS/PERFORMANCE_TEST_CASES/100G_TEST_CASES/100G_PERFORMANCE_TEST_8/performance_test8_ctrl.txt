@@ -1,0 +1,104 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+
+0D_01     //pkt_1 = 45 Bytes with 5 valid bytes at the end
+00_00
+  
+09_03         //pkt_2 = 105 Bytes with 1 valid bytes at the end
+00_00
+00_00
+00_00        
+  
+20_02         //pkt_3 = 96 Bytes with 8 valid bytes at the end
+00_00
+00_00
+  
+0E_2E    //pkt_4 = 1486 Bytes with 6 valid bytes at the end 
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00
+00_00      
+  
+0a_01        //pkt_5 = 42 Bytes with 2 valid bytes at the end 
+00_00
+  
+04_05       //pkt_6 = 164 Bytes with 4 valid bytes at the end
+00_00
+00_00
+00_00        
+00_00
+00_00
+  
+0D_02     //pkt_7 = 77 Bytes with 5 valid bytes at the end
+00_00
+00_00
+  
+13_01   ////pkt_8 = 51  Bytes with 3 valid bytes at the end
+00_00

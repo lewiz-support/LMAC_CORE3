@@ -1,0 +1,33 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_ctrl_fifo/rdusedw
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/WIDTH
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/DEPTH
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/PTR
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/aclr
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/wrclk
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/wrreq
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/data
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/wrfull
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/wrusedw
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/rdclk
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/rdreq
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/q
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/rdempty
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/br_data_fifo/rdusedw
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {491944 ps} 0} {{Cursor 2} {2139128 ps} 0} {{Cursor 3} {1095000 ps} 0} {{Cursor 4} {203000 ps} 0}
+configure wave -namecolwidth 302
+configure wave -valuecolwidth 472
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {1468711 ps} {1517437 ps}

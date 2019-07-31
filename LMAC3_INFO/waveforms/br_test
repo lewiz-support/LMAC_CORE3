@@ -1,0 +1,192 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/any_eof
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/any_sof
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/bad_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/bad_frame_noeof
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/BAD_FRAMESOF_CNT
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/bad_framesof_cnt156
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/bfsof_sfifo_dout
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/bfsof_sfifo_empty
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/bfsof_sfifo_full
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_rd_empty
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_rd_en
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof0_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof4
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof4_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof8
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof8_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof12
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof12_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof16
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof16_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof20
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof20_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof24
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof24_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof28
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/br_sof28_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/clk250
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_in
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_in_dly
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_in_dly_1
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_0
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_4
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_8
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_12
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_16
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_20
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_24
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_28
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/ctrl_out_without_shift
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/CTRL_WIDTH
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_no_shift
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift4
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift8
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift12
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift16
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift20
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift24
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/d_shift28
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_in
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_in_dly
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_in_dly_1
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_inA
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_inB
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_inC
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_inD
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_0
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_4
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_8
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_12
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_16
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_20
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_24
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_28
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_eof
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/data_out_without_shift
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof1
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof2
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof3
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof4
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof5
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof6
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/eof7
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/flag0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/fmac_rxd_en
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/fmac_rxd_en156
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/frame_dly
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/frame_dly_1
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/frame_done
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/has_sof
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/init_done
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/link_bad
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/link_cnt
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/LINK_FAIL
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/link_fault
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/LINK_GOOD
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/link_ok
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/LINK_RCVR
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/linkup
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/no_shift
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/raw_eof_cnt156
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/RAW_FRAME_CNT
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/raw_frame_cnt156
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/raw_sof_cnt156
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/rdusedw_ctrl
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/rdusedw_data
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/rf_sfifo_dout
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/rf_sfifo_empty
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/rf_sfifo_full
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq1
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq2
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq3
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq4
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq5
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq6
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/seq7
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift4
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift8
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift12
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift16
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift20
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift24
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/shift28
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof0_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof1
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof2
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof3
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof4
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof4_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof5
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof6
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof7
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof8
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof8_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof8_eof_same_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof9
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof10
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof11
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof12
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof12_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof12_eof_same_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof13
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof14
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof15
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof16
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof16_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof16_eof_same_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof17
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof18
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof19
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof20
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof20_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof20_eof_same_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof21
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof22
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof23
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof24
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof24_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof24_eof_same_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof25
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof26
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof27
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof28
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof28_d
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof28_eof_same_frame
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof29
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof30
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof31
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/sof_eof_same_frame
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/state
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/unknown_sof_sticky
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/WIDTH
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/x_clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/byte_reordering_100G/byte_reordering/xaui_mode
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {1041000 ps} 0} {{Cursor 2} {3546391 ps} 0} {{Cursor 3} {1143000 ps} 0} {{Cursor 4} {545479 ps} 0} {{Cursor 5} {827299 ps} 0}
+configure wave -namecolwidth 302
+configure wave -valuecolwidth 414
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {508237 ps} {557611 ps}

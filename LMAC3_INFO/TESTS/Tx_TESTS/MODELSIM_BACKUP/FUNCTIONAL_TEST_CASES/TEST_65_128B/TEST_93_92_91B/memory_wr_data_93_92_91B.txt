@@ -1,0 +1,41 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+a22bc2d2bb697156_fcc13f04aa48036e_0045000810111213_0000af4e00321200    //pkt_1 = 93 Bytes
+1b21621d8a8660ab_fc3185fa5a02f21a_2d9905667849c556_96c541391fbcdc54   
+e454dc2672c26c44_de0ed1740b145096_9120820f411c3aba_0bdb70a8649707fb
+
+f6efd32065a4d798_9911991199119911_0100060810111213_0000af4e00321200  //pkt_2 = 92 Bytes
+7cfe6f8b326848b1_b79aaf4e00321200_43eb33b701fd5532_7f82550edfcad08c          
+28e5c7737c01189f_0045000810111213_1d7a775d48ce30ca_31077022fb7a81e4
+
+dd3a931541235a48_53769d8b7f0fd7bd_0000008110111213_0000ffffffffffff //pkt_3 = 91 Bytes
+2d9905667849c556_96c541391fbcdc54_fcc13f04aa48036e_35517f66d6fb9d3c         
+9120820f411c3aba_0bdb70a8649707fb_a22bc2d2bb697156_ff705057cc44ba8f
+
+//
+fc3185fa5a02f21a

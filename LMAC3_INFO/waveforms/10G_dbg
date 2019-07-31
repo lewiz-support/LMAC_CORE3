@@ -1,0 +1,45 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/clk
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/x2c_ctrl/byte_cnt
+add wave -noupdate -format Logic -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/x2c_ctrl/vld_c_bcnt
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/x2c_ctrl/c_byte_cnt
+add wave -noupdate -format Logic -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/x_bcnt_we
+add wave -noupdate -format Literal -radix unsigned -expand /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/x_byte_cnt
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/clk
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/data_out_10g
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/ctrl_out_10g
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof0
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof1
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof2
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof3
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof4
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof5
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof6
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof7
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof0_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof1_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof2_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof3_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof4_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof5_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof6_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/sof7_dly
+add wave -noupdate -format Literal -radix hexadecimal -expand /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_50G/x_byte_cnt_10g_reg
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {539200 ps} 0}
+configure wave -namecolwidth 150
+configure wave -valuecolwidth 408
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {532177 ps} {635101 ps}

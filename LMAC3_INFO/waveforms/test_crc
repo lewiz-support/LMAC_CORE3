@@ -1,0 +1,54 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider TX_FIFO_IF
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/wrclk
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/wrreq
+add wave -noupdate -color Pink -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/data
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/rdreq
+add wave -noupdate -color Pink -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/q
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/rdempty
+add wave -noupdate -divider TX_ENCAP_100G
+add wave -noupdate -color Yellow -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_encap_100G/txfifo_rd_en
+add wave -noupdate -color Yellow -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_encap_100G/txfifo_dout
+add wave -noupdate -color Yellow -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_encap_100G/rts
+add wave -noupdate -color Yellow -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_encap_100G/wdata
+add wave -noupdate -color Yellow -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_encap_100G/rbytes
+add wave -noupdate -divider TX_CGMII_100G
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/rdata
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/crc_out
+add wave -noupdate -color Turquoise -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/crc_vld
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/txd
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/txc
+add wave -noupdate -divider LMAC_CORE_TOP_OUTPUT
+add wave -noupdate -color Plum -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/cgmii_txd
+add wave -noupdate -color Plum -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/cgmii_txc
+add wave -noupdate -color Plum -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/FMAC_TX_PKT_CNT
+add wave -noupdate -color Plum -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/FMAC_TX_BYTE_CNT
+add wave -noupdate -divider PHY_EMULATOR
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_txd
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_txc
+add wave -noupdate -format Logic /AXIS_LMAC_TB/phy_emulator_100G/loopback_mode
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_rxd
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_rxc
+add wave -noupdate -divider RX_CGMII
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/rxd
+add wave -noupdate -color Aquamarine -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/chk_crc
+add wave -noupdate -color Aquamarine -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/crc32_ok
+add wave -noupdate -color Aquamarine -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/crc32_out
+add wave -noupdate -color Aquamarine -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/crc32_vld
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {402560 ps} 0} {{Cursor 2} {408960 ps} 0} {{Cursor 3} {467200 ps} 0} {{Cursor 4} {606720 ps} 0}
+configure wave -namecolwidth 302
+configure wave -valuecolwidth 392
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {389201 ps} {696636 ps}

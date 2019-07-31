@@ -1,0 +1,50 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider PHY_EMULATOR_100G
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/x_clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/fmac_speed
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_sel
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_txd
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_txc
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_rxd
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/cgmii_rxc
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/test
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_en
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_start_addr
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_read_cnt
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_data_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_ctrl_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/addr_incr
+add wave -noupdate -divider RX_PKT_GEN_100G
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/x_clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/fmac_speed
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/data_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/ctrl_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/test
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/tb_rx_pkt_gen_read_cnt
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/tb_rx_pkt_gen_addr_offset
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/tb_rx_pkt_gen_en
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/tb_rx_pkt_gen_read_cnt_int
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/tb_rx_pkt_gen_addr_offset_int
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/tb_rx_pkt_gen_en_dly1
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/d_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/c_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/rx_pkt_gen_addr
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {511692 ps} 0}
+configure wave -namecolwidth 278
+configure wave -valuecolwidth 354
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {0 ps} {5779200 ps}

@@ -1,0 +1,232 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+//UBroadcast packet -147 Bytes - B.E 19
+01000608f4ffff32_1200ffffffffffff_000000085bc8b40c_0000ffffffffffff
+b0a908d2f3d23f6c_5587ffffffff0000_a8c0f4ffff321200_1200020004060008
+0000020000001700_9a7708a71a0219b3_3f2004f60db9d2f4_84d6ba0d1796c2a0                
+d85f2e029d0b15e9_660c000000000008_b0a908d2f3d23f6c_0000180000003d7e                
+0707070707070707_3a817e7ecab2e2b3_0000020000001700_660c000000000008 
+//Unicast - 151 Bytes B.E 23
+52d11ae27da7b61c_b95d1d614f543308_004500085bc8b40c_602caf4e00321200
+870b751bfff94f22_dcb7dd57aec4668f_40b439d065a169d2_bc5836cebcbd5ff1
+4920f9feaa9b2347_5e64d9700dc6a190_7bd980b7ad20ed14_fbfc4f5fa9ea651c                
+aaee34cb5ef397d6_77873fddc9ce3c7c_c21c525b7ca4d767_3095ec7f61f41326                
+0707070707070707_b8498aae34cad861_0000020000001700_269c56e5c1b8287b 
+//Multicast - 158 Bytes  b.E  30
+a4ffd54ae9294793_51f437833b6811ed_004500085bc8b40c_00000000005e0001
+a8c0f4ffff321200_0000000000000000_c807a8c0f4ffff32_8d1d90630412f2e1                
+4920f9feaa9b2347_5e64d9700dc6a190_0018000000000000_000000000000c807
+aaee34cb5ef397d6_77873fddc9ce3c7c_c21c525b7ca4d767_3095ec7f61f41326                
+0000020000001700_e74e8989cdd8a277_0000020000001700_269c56e5c1b8287b   
+//Multicast - 159 Bytes 31
+a4ffd54ae9294793_51f437833b6811ed_004500085bc8b40c_00000000005e0001
+870b751bfff94f22_dcb7dd57aec4668f_40b439d065a169d2_bc5836cebcbd5ff1                
+4920f9feaa9b2347_b8498aae34cad861_0000020000001700_269c56e5c1b8287b
+aaee34cb5ef397d6_77873fddc9ce3c7c_c21c525b7ca4d767_3095ec7f61f41326                
+3a817e7ecab2e2b3_0000020000001700_660c000000000008_269c56e5c1b8287b        
+//
+3a817e7ecab2e2b3_0000020000001700_660c000000000008_269c56e5c1b8287b        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

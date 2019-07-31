@@ -1,0 +1,193 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+//Broadcast packet
+01000608f4ffff32_1200ffffffffffff_000000081bc8b40c_0000ffffffffffff
+11b631c8c5f82d3a_660c000000000008_9a7708a71a0219b3_1200020004060008
+1c493448c0fc87bb_0000020000001700_0000020000001700_a8c0f4ffff321200         
+cb0fad256702d850_3a817e7ecab2e2b3_0000180000003d7e_5587ffffffff0000       
+dcb118574172ee51_bca665c1057261f7_b0a908d2f3d23f6c_b0a908d2f3d23f6c
+3dfebea518e2da46_738a98df8adf5651_660c000000000008_84d6ba0d1796c2a0 
+5191d99f5e39a6c3_9cd0fa245a2bd001_d85f2e029d0b15e9_3f2004f60db9d2f4
+cb0fad256702d850_1c493448c0fc87bb_11b631c8c5f82d3a_1098c55d62aa48d2
+3a817e7ecab2e2b3_0000180000003d7e_5587ffffffff0000_dcb118574172ee51                                          
+//Unicast packet - 2
+52d11ae27da7b61c_b95d1d614f543308_004500085bc8b40c_602caf4e00321200
+3d6ddf8e77bab6b7_dcb118574172ee51_219d0446eef7fa9f_bc5836cebcbd5ff1
+b5821119cf2cb63a_3dfebea518e2da46_7cce274dd05d1009_dcb7dd57aec4668f                
+8f77813fc69b8385_5191d99f5e39a6c3_85e6ec0e9d445b65_870b751bfff94f22                
+219d0446eef7fa9f_1098c55d62aa48d2_33f4918cc7f44d39_fbfc4f5fa9ea651c                 
+7cce274dd05d1009_8b560440c26d0e70_bf63918e48ff6966_9cd0fa245a2bd001
+85e6ec0e9d445b65_9e83431d959f6ff0_b54125a54e407ea9_7bd980b7ad20ed14                
+33f4918cc7f44d39_cf898392feaf8bb2_7a14cbbe98b9b44a_738a98df8adf5651
+bf63918e48ff6966_a07e4ce57639e231_e4a9bd3e39d33a77_5e64d9700dc6a190
+b54125a54e407ea9_a96be17f2f35810c_a436560f3e70e5fe_4920f9feaa9b2347 
+7a14cbbe98b9b44a_549e44bec94b29fb_9cd0fa245a2bd001_77873fddc9ce3c7c               
+e4a9bd3e39d33a77_200bf6e388366fad_b969ea29ccce8968_aaee34cb5ef397d6
+a436560f3e70e5fe_ff08b5457ea52856_a688e7ac9b142776_269c56e5c1b8287b                                
+9cd0fa245a2bd001_95fe5f4cc42dcb2a_8dde4642acd329b7_0000020000001700
+b969ea29ccce8968_9d3b468704c9fe19_11b631c8c5f82d3a_b8498aae34cad861                
+a688e7ac9b142776_e45a9cfbdef26637_1c493448c0fc87bb_a436560f3e70e5fe
+8dde4642acd329b7_9da07b1b662317d6_cb0fad256702d850_8f77813fc69b8385
+e4a9bd3e39d33a77_1c493448c0fc87bb_9d3b468704c9fe19_11b631c8c5f82d3a
+a436560f3e70e5fe_cb0fad256702d850_e45a9cfbdef26637_1c493448c0fc87bb
+9cd0fa245a2bd001_dcb118574172ee51_9da07b1b662317d6_cb0fad256702d850                
+b969ea29ccce8968_3dfebea518e2da46_3d6ddf8e77bab6b7_dcb118574172ee51
+a688e7ac9b142776_5191d99f5e39a6c3_b5821119cf2cb63a_3dfebea518e2da46                
+8dde4642acd329b7_1098c55d62aa48d2_33f4918cc7f44d39_5191d99f5e39a6c3
+11b631c8c5f82d3a_8b560440c26d0e70_bf63918e48ff6966_1098c55d62aa48d2                
+9e83431d959f6ff0_b54125a54e407ea9_8b560440c26d0e70_cf898392feaf8bb2
+cf898392feaf8bb2_7a14cbbe98b9b44a_9e83431d959f6ff0_a07e4ce57639e231                
+ff08b5457ea52856_200bf6e388366fad_549e44bec94b29fb_a96be17f2f35810c
+8b560440c26d0e70_bf63918e48ff6966_1098c55d62aa48d2_95fe5f4cc42dcb2a                           
+//Multicast Packet-3
+a4ffd54ae9294793_51f437833b6811ed_004500085bc8b40c_00000000005e0001
+7bd980b7ad20ed14_660c000000000008_e74e8989cdd8a277_8d1d90630412f2e1                
+5e64d9700dc6a190_d85f2e029d0b15e9_f0c4c0a237096292_738a98df8adf5651
+8c1b4cb285f9d6e3_4ee8a21a4fb1f5a9_602caf4e00321200_c807a8c0f4ffff32                
+51f437833b6811ed_ca9b7db3b9af9a8e_00450008f0ffff32_0000000000000000 
+a4ffd54ae9294793_f0c4c0a237096292_12000b0419270008_a8c0f4ffff321200      
+8d1d90630412f2e1_9bebe39bf0e4abf4_a8c06408a8c02f64_000000000000c807
+8f77813fc69b8385_4920f9feaa9b2347_0680004000005804_0018000000000000       
+219d0446eef7fa9f_3095ec7f61f41326_18507c0a773f7211_5e64d9700dc6a190         
+7cce274dd05d1009_c21c525b7ca4d767_000058a3bc0cbc08_4920f9feaa9b2347 
+85e6ec0e9d445b65_77873fddc9ce3c7c_0000000400000000_3095ec7f61f41326 
+33f4918cc7f44d39_aaee34cb5ef397d6_0025000040c73822_c21c525b7ca4d767
+bf63918e48ff6966_269c56e5c1b8287b_5587ffffffff0000_77873fddc9ce3c7c                
+b54125a54e407ea9_40b439d065a169d2_0018000000000000_aaee34cb5ef397d6
+7a14cbbe98b9b44a_dcb7dd57aec4668f_0000020000001700_9cd0fa245a2bd001                
+e4a9bd3e39d33a77_870b751bfff94f22_0000180000003d7e_269c56e5c1b8287b
+a436560f3e70e5fe_fbfc4f5fa9ea651c_b0a908d2f3d23f6c_0000020000001700 
+ff08b5457ea52856_9e83431d959f6ff0_cb0fad256702d850_9cd0fa245a2bd001               
+95fe5f4cc42dcb2a_cf898392feaf8bb2_dcb118574172ee51_b969ea29ccce8968
+9d3b468704c9fe19_a07e4ce57639e231_3dfebea518e2da46_a688e7ac9b142776
+e45a9cfbdef26637_a96be17f2f35810c_5191d99f5e39a6c3_8dde4642acd329b7
+9da07b1b662317d6_549e44bec94b29fb_1098c55d62aa48d2_11b631c8c5f82d3a
+3d6ddf8e77bab6b7_200bf6e388366fad_8b560440c26d0e70_1c493448c0fc87bb 
+44d6e59832cb30db_b7b2833cca5d4a89_54848efb4dec9f58_b5821119cf2cb63a
+1e49d4035e857b2c_e65cd689443fa486_652b8cd6dc492b50_e4ed3319843de5fb                       
+//Broadcast packet                                                 
+01000608f4ffff32_1200ffffffffffff_000000081bc8b40c_0000ffffffffffff                
+11b631c8c5f82d3a_660c000000000008_9a7708a71a0219b3_1200020004060008
+1c493448c0fc87bb_0000020000001700_0000020000001700_a8c0f4ffff321200                
+cb0fad256702d850_3a817e7ecab2e2b3_0000180000003d7e_5587ffffffff0000
+dcb118574172ee51_bca665c1057261f7_b0a908d2f3d23f6c_b0a908d2f3d23f6c                
+3dfebea518e2da46_738a98df8adf5651_660c000000000008_84d6ba0d1796c2a0
+5191d99f5e39a6c3_9cd0fa245a2bd001_d85f2e029d0b15e9_3f2004f60db9d2f4                
+cb0fad256702d850_1c493448c0fc87bb_11b631c8c5f82d3a_1098c55d62aa48d2
+3a817e7ecab2e2b3_0000180000003d7e_5587ffffffff0000_dcb118574172ee51                                              
+//
+4049a00b4efb2f99                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

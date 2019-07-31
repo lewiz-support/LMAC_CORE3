@@ -1,0 +1,80 @@
+#
+# Copyright (C) 2018 LeWiz Communications, Inc. 
+# 
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+# 
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+# 
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library release; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+# 
+# LeWiz can be contacted at:  support@lewiz.com
+# or address:  
+# PO Box 9276
+# San Jose, CA 95157-9276
+# www.lewiz.com
+# 
+#    Author: LeWiz Communications, Inc.
+#    Language: Verilog
+#
+# source TESTS/Tx_TESTS/MODELSIM_BACKUP/FUNCTIONAL_TEST_CASES/TEST_256_1518B/TEST_327_560_594_352B/script_25G.txt   ( August 13th 2018)
+# script for testing LMAC_STREAM :  generating tx packets
+# gen_en_wr testbench signals generates tx packets which is send from AXIS bridge to LMAC
+
+
+
+vsim work.axis_lmac_tb            
+                                   
+do C:/LMAC3_INFO/waveforms/tx_100G
+
+mem load -i C:/LMAC3_INFO/TESTS/Tx_TESTS/MODELSIM_BACKUP/FUNCTIONAL_TEST_CASES/TEST_256_1518B/TEST_327_560_594_352B/memory_wr_data327_560_594_352B.txt -format hex /AXIS_LMAC_TB/axi_stream_master/memory_wr_module/memory_wr_data
+mem load -i C:/LMAC3_INFO/TESTS/Tx_TESTS/MODELSIM_BACKUP/FUNCTIONAL_TEST_CASES/TEST_256_1518B/TEST_327_560_594_352B/memory_wr_ctrl327_560_594_352B.txt -format hex /AXIS_LMAC_TB/axi_stream_master/memory_wr_module/memory_wr_ctrl
+
+mem load -i C:/LMAC3_INFO/PHY_EMULATOR/rx_pkt_gen_data.mem -format hex /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/rx_pkt_gen2kx256_inst/dram_data/mem 
+mem load -i C:/LMAC3_INFO/PHY_EMULATOR/rx_pkt_gen_ctrl.mem -format hex /AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_100G/rx_pkt_gen2kx32_inst/dram_ctrl/mem  
+
+######Clock assignment for speed 100G, 50G and 25G
+force -freeze sim:/AXIS_LMAC_TB/clk 0 0, 1 {640 ps} -r {1280 ps}
+
+force -freeze sim:/AXIS_LMAC_TB/tx_mac_aclk 0 0, 1 {640 ps} -r {1280 ps}
+force -freeze sim:/AXIS_LMAC_TB/rx_mac_aclk 0 0, 1 {640 ps} -r {1280 ps}
+
+force -freeze sim:/AXIS_LMAC_TB/xA_clk 0 0, 1 {1280 ps} -r {2560 ps}                                                                                                                                                           
+                                                                                                                                                           
+force -freeze sim:/AXIS_LMAC_TB/fmac_speed 3'b001 0                                                                                                        
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_100G/rx_pkt_gen_start_addr 64'd00 0                                                                           
+                                                                                                                                                           
+                                                                                                                                                           
+                                                                                                                                                           
+# generating first packet     - TX packet 1                                                                                                                
+                                                                                                                                                           
+run 400ns                                                                                                                                                  
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 1 0                                                                                                              
+run 1.28ns                                                                                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 0 0                                                                                                              
+                                                                                                                                                           
+# Generate the TX packet	-- TX packet 2                                                                                                                    
+run 100ns                                                                                                                                                  
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 1 0                                                                                                              
+run 1.28ns                                                                                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 0 0                                                                                                              
+                                                                                                                                                           
+# Generate the TX packet	-- TX packet 3                                                                                                                    
+run 100ns                                                                                                                                                  
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 1 0                                                                                                              
+run 1.28ns                                                                                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 0 0                                                                                                              
+                                                                                                                                                           
+run 100ns                                                                                                                                                  
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 1 0                                                                                                              
+run 1.28ns                                                                                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/gen_en_wr 0 0                                                                                                              
+                                                                                                                                                           
+run 1us                                                                                                                                                    

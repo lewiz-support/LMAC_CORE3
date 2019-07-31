@@ -1,0 +1,75 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider encap
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/fmac_speed
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/IDLE
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/READSIZE
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/READ1
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/MAC_HDR
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/MAC_DAT
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/P_REQ
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/P_PREAM
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/P_PKT
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/psaddr
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/mac_pause_value
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/tx_b2b_dly
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/txfifo_empty
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/txfifo_rd_en
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/txfifo_dout
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/clk
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rst_
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/mode_10G
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rts
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/wdata
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rbytes
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rx_pause
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rx_pvalue
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rx_pack
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/xreq
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/xon
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/xdone
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/wsel
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/ptimer
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_reg_count
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_start
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/tx_rdy
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rx_pause_sync
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/rx_pvalue_sync
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/bytes_remain
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/counter
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/pulse_0
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/pulse_1
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/state
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_idle
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_readsize
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_read1
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_mac_hdr
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_mac_dat
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_p_req
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/st_p_pkt
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/tx_dvld
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/b2b_cnt_val
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/b2b_counter
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/b2b_ok
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_data
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_cnt
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_1
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_done
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/p_send
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/tcore_fmac_core/tx_10G_wrap/tx_encap/ascii_state
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {1041000 ps} 0}
+configure wave -namecolwidth 302
+configure wave -valuecolwidth 414
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {1034516 ps} {1079897 ps}

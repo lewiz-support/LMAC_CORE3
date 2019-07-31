@@ -1,0 +1,72 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+quietly virtual signal -install /AXIS_LMAC_TB/axi_stream_master { /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tdata[63:0]} RX_TDATA_63_0
+quietly virtual signal -install /AXIS_LMAC_TB/axi_stream_master { /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tdata[127:64]} RX_TDATA_127_64
+quietly virtual signal -install /AXIS_LMAC_TB/axi_stream_master { /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tdata[191:128]} RX_TDATA_191_128
+quietly virtual signal -install /AXIS_LMAC_TB/axi_stream_master { /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tdata[255:192]} RX_TDATA_255_192
+add wave -noupdate -divider AXI_MASTER_TX
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/reset_
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/gen_en_wr
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tdata
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tvalid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tlast
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tuser
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tstrb
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tready
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/txdata_fifo256x64/wrempty
+add wave -noupdate -divider AXI_MASTER_RX
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_mac_aclk
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/RX_TDATA_63_0
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/RX_TDATA_127_64
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/RX_TDATA_191_128
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/RX_TDATA_255_192
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tdata
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tvalid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tlast
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tuser
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tstrb
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tbcnt
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tready
+add wave -noupdate -format Literal -radix ascii /AXIS_LMAC_TB/axi_stream_master/ascii_axis_rd_state
+add wave -noupdate -format Logic /AXIS_LMAC_TB/axi_stream_master/rd_done
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_statistics_vector
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_statistics_valid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_pkt_gen_sel
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/rx_mac_aclk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/mem_axis_rdata
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/mem_rd_address
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/mem_axis_rstrb
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/rd_done
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/rx_axis_mac_tvalid
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/rx_axis_mac_tlen
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/rx_pkt_gen_sel
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/mem_rd_start_address
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/memory_rd_8b_module/pkt_cnt
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/mem_rd_start_address
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/mem_rd_end_address
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/memory_rd_data
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/memory_wr_data
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/memory_rd_ctrl
+add wave -noupdate -format Logic /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/is_error
+add wave -noupdate -format Logic /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/rx_axis_mac_tvalid
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/rx_axis_mac_tbcnt
+add wave -noupdate -format Logic /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/axis_rd_done_st
+add wave -noupdate -format Literal /AXIS_LMAC_TB/axi_stream_master/memory_compare_8b/i
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {603000 ps} 0} {{Cursor 2} {201000 ps} 0} {{Cursor 3} {1565863 ps} 0}
+configure wave -namecolwidth 292
+configure wave -valuecolwidth 323
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {486274 ps} {735439 ps}

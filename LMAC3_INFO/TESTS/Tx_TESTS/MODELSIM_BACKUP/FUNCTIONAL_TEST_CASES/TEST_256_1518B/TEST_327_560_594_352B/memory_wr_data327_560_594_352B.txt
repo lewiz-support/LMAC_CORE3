@@ -1,0 +1,224 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+//Broadcast packet
+01000608f4ffff32_1200ffffffffffff_000000085bc8b40c_0000ffffffffffff
+9cd0fa245a2bd001_d85f2e029d0b15e9_9a7708a71a0219b3_1200020004060008_
+11b631c8c5f82d3a_660c000000000008_0000020000001700_a8c0f4ffff321200_         
+1c493448c0fc87bb_0000020000001700_0000180000003d7e_5587ffffffff0000_       
+cb0fad256702d850_3a817e7ecab2e2b3_b0a908d2f3d23f6c_b0a908d2f3d23f6c_
+dcb118574172ee51_bca665c1057261f7_660c000000000008_84d6ba0d1796c2a0_ 
+3dfebea518e2da46_738a98df8adf5651_dcb118574172ee51_3f2004f60db9d2f4_
+738a98df8adf5651_0000020000001700_1c493448c0fc87bb_5191d99f5e39a6c3_
+9cd0fa245a2bd001_3a817e7ecab2e2b3_cb0fad256702d850_1098c55d62aa48d2_                
+11b631c8c5f82d3a_bca665c1057261f7_dcb118574172ee51_11b631c8c5f82d3a_                
+d85f2e029d0b15e9_3a817e7ecab2e2b3_0000020000001700_1c493448c0fc87bb_ 
+                            
+//Unicast packet-2
+
+52d11ae27da7b61c_b95d1d614f543308_004500085bc8b40c_602caf4e00321200
+1c493448c0fc87bb_bf63918e48ff6966_aaee34cb5ef397d6_bc5836cebcbd5ff1_
+cb0fad256702d850_b54125a54e407ea9_269c56e5c1b8287b_dcb7dd57aec4668f_                
+dcb118574172ee51_7a14cbbe98b9b44a_0000020000001700_870b751bfff94f22_                
+3dfebea518e2da46_e4a9bd3e39d33a77_b8498aae34cad861_fbfc4f5fa9ea651c_                 
+5191d99f5e39a6c3_a436560f3e70e5fe_a436560f3e70e5fe_9cd0fa245a2bd001_
+1098c55d62aa48d2_9cd0fa245a2bd001_8f77813fc69b8385_7bd980b7ad20ed14_                
+8b560440c26d0e70_b969ea29ccce8968_219d0446eef7fa9f_738a98df8adf5651_
+9e83431d959f6ff0_a688e7ac9b142776_7cce274dd05d1009_5e64d9700dc6a190_
+cf898392feaf8bb2_8dde4642acd329b7_85e6ec0e9d445b65_4920f9feaa9b2347_ 
+a07e4ce57639e231_11b631c8c5f82d3a_33f4918cc7f44d39_77873fddc9ce3c7c_               
+7cce274dd05d1009_3d6ddf8e77bab6b7_95fe5f4cc42dcb2a_a96be17f2f35810c_ 
+85e6ec0e9d445b65_b5821119cf2cb63a_9d3b468704c9fe19_549e44bec94b29fb_                                 
+33f4918cc7f44d39_8f77813fc69b8385_e45a9cfbdef26637_200bf6e388366fad_ 
+bf63918e48ff6966_219d0446eef7fa9f_9da07b1b662317d6_ff08b5457ea52856_                 
+a8c06508a8c04783_00450008f0ffff32_c7f24ddc416e9319_1c1b29014b9ce257_
+d300c5f4a1004208_11400040c724e700_1200f7400c6aeae8_af3df79a7cbe3878_
+030102c88130439e_0003020001020e30_7cce274dd05d1009_5e64d9700dc6a190_
+  
+//Multicast Packet-3
+
+02022701025b27ae_2130f999e180881f_004500085bc8b40c_00000000005e0001
+12000b0419270008_c21c525b7ca4d767_8d1d90630412f2e1_696d64410504e202_         
+a8c06408a8c02f64_77873fddc9ce3c7c_738a98df8adf5651_8b86a22af70c046e_       
+0680004000005804_aaee34cb5ef397d6_c807a8c0f4ffff32_04f36a394a9d3f51_         
+18507c0a773f7211_9cd0fa245a2bd001_0000000000000000_47ddca961c0d7408_       
+000058a3bc0cbc08_269c56e5c1b8287b_a8c0f4ffff321200_41b318acc87a0403_         
+0000000400000000_0000020000001700_000000000000c807_5c727ac016d0f34d_       
+0025000040c73822_e74e8989cdd8a277_0018000000000000_0000000001005e00_         
+5587ffffffff0000_f0c4c0a237096292_5e64d9700dc6a190_004500085bc8b40c_       
+0018000000000000_602caf4e00321200_4920f9feaa9b2347_51f437833b6811ed_                               
+0000020000001700_00450008f0ffff32_3095ec7f61f41326_a4ffd54ae9294793_
+0000180000003d7e_ca9b7db3b9af9a8e_c21c525b7ca4d767_dcb7dd57aec4668f_                 
+b0a908d2f3d23f6c_f0c4c0a237096292_77873fddc9ce3c7c_870b751bfff94f22_ 
+660c000000000008_9bebe39bf0e4abf4_aaee34cb5ef397d6_fbfc4f5fa9ea651c_                 
+d85f2e029d0b15e9_4920f9feaa9b2347_269c56e5c1b8287b_7bd980b7ad20ed14_  
+4ee8a21a4fb1f5a9_3095ec7f61f41326_40b439d065a169d2_5e64d9700dc6a190_       
+7cce274dd05d1009_8f77813fc69b8385_a4ffd54ae9294793_8c1b4cb285f9d6e3_
+85e6ec0e9d445b65_219d0446eef7fa9f_8d1d90630412f2e1_51f437833b6811ed_       
+33f4918cc7f44d39_bf63918e48ff6966_b54125a54e407ea9_40b439d065a169d2_ 
+        
+//Broadcast packet
+
+01000608f4ffff32_1200ffffffffffff_000000085bc8b40c_0000ffffffffffff
+9cd0fa245a2bd001_d85f2e029d0b15e9_9a7708a71a0219b3_1200020004060008_
+11b631c8c5f82d3a_660c000000000008_0000020000001700_a8c0f4ffff321200_         
+1c493448c0fc87bb_0000020000001700_0000180000003d7e_5587ffffffff0000_       
+cb0fad256702d850_3a817e7ecab2e2b3_b0a908d2f3d23f6c_b0a908d2f3d23f6c_
+dcb118574172ee51_bca665c1057261f7_660c000000000008_84d6ba0d1796c2a0_ 
+3dfebea518e2da46_738a98df8adf5651_dcb118574172ee51_3f2004f60db9d2f4_
+738a98df8adf5651_0000020000001700_1c493448c0fc87bb_5191d99f5e39a6c3_
+9cd0fa245a2bd001_3a817e7ecab2e2b3_cb0fad256702d850_1098c55d62aa48d2_                
+11b631c8c5f82d3a_bca665c1057261f7_dcb118574172ee51_11b631c8c5f82d3a_                
+d85f2e029d0b15e9_3a817e7ecab2e2b3_0000020000001700_1c493448c0fc87bb_ 
+ 
+////              
+7a14cbbe98b9b44a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

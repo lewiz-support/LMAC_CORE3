@@ -1,0 +1,69 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider AXI_MASTER
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/reset_
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/gen_en_wr
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/tx_axis_mac_tdata
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/tx_axis_mac_tstrb
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/tx_axis_mac_tvalid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/tx_axis_mac_tlast
+add wave -noupdate -divider AXIS_BRIDGE
+add wave -noupdate -color Goldenrod -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/clk
+add wave -noupdate -color Goldenrod -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/xA_clk
+add wave -noupdate -color Goldenrod -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/tx_axis_mac_tdata
+add wave -noupdate -color Goldenrod -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/tx_axis_mac_tstrb
+add wave -noupdate -color Goldenrod -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/fib_tx_mac_data
+add wave -noupdate -color Goldenrod -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/fib_tx_mac_wr
+add wave -noupdate -divider TX_FIFO_IF
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/wrclk
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/wrreq
+add wave -noupdate -color Pink -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/data
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/wrfull
+add wave -noupdate -color Pink -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/wrusedw
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/rdclk
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/rdreq
+add wave -noupdate -color Pink -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/q
+add wave -noupdate -color Pink -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo_1024x256/rdempty
+add wave -noupdate -divider TX_ENCAP_10G
+add wave -noupdate -color Yellow -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/clk
+add wave -noupdate -color Yellow -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/rst_
+add wave -noupdate -color Yellow -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/txfifo_empty
+add wave -noupdate -color Yellow -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/txfifo_rd_en
+add wave -noupdate -color Yellow -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/txfifo_dout
+add wave -noupdate -color Yellow -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/rts
+add wave -noupdate -color Yellow -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/wdata
+add wave -noupdate -color Yellow -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/rbytes
+add wave -noupdate -divider TX_XGMII_10G
+add wave -noupdate -color Turquoise -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/clk250
+add wave -noupdate -color Turquoise -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/clk156
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/rdata
+add wave -noupdate -color Turquoise -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/rbytes
+add wave -noupdate -color Turquoise -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/cts
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/xgmii_txd
+add wave -noupdate -color Turquoise -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/xgmii_txc
+add wave -noupdate -color Turquoise -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/FMAC_TX_PKT_CNT
+add wave -noupdate -color Turquoise -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/FMAC_TX_BYTE_CNT
+add wave -noupdate -format Logic -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/sent
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/accumulated_bcnt
+add wave -noupdate -divider CORE_TOP_OUTPUT
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/cgmii_txc
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/cgmii_txd
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/FMAC_TX_PKT_CNT
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/FMAC_TX_BYTE_CNT
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {855000 ps} 0}
+configure wave -namecolwidth 302
+configure wave -valuecolwidth 414
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {209284 ps} {1915757 ps}

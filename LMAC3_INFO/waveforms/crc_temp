@@ -1,0 +1,44 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/rst_n
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_vld
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_eop
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_sop
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_in
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_be
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/crc_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/crc_vld
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/crc_reg
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_eop_dly
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data_be_dly
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data1
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data2
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data3
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/data4
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/crc_in
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/crc_out_d256
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/data_in
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/crc_in
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/crc_en
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/crc_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/rst
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/clk
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/lfsr_q
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/eth_crc32_gen_tx/CRC32_D256/lfsr_c
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {402560 ps} 0} {{Cursor 2} {408960 ps} 0} {{Cursor 3} {858880 ps} 0} {{Cursor 4} {4476014 ps} 0}
+configure wave -namecolwidth 168
+configure wave -valuecolwidth 101
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {846871 ps} {880805 ps}

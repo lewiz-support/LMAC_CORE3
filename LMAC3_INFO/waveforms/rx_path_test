@@ -1,0 +1,52 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider PHY_EMULATOR_PACKET
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/x_clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/fmac_speed
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_sel
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_start_addr
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_read_cnt
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_data_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_ctrl_out
+add wave -noupdate -divider XGMII_INTERFACE
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/xgmii_txd
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/xgmii_txc
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/xgmii_rxd
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/xgmii_rxc
+add wave -noupdate -divider LMAC_CORE_SIGNALS
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/xgmii_rxd
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/xgmii_rxc
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_mac_data
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_mac_empty
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_mac_rd
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/rx_mac_rd_cycle
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/cs_fifo_rd_en
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/cs_fifo_empty
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/ipcs_fifo/data
+add wave -noupdate -divider AXIS_MASTER_RX
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_mac_aclk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tdata
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tstrb
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tvalid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tlast
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/rx_axis_mac_tready
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {14982000 ps} 0} {{Cursor 2} {15130000 ps} 0} {{Cursor 3} {17358000 ps} 0}
+configure wave -namecolwidth 262
+configure wave -valuecolwidth 106
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {0 ps} {19010020 ps}

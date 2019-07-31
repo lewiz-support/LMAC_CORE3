@@ -1,0 +1,27 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/chk_crc
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/crc32_ok
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/crc32_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/core_rx_cgmii/crc32_vld
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/clk156
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/rts
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/rdata
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/rbytes
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_100G_wrap/tx_cgmii/tx_dvld
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {439040 ps} 0} {{Cursor 2} {1365760 ps} 0} {{Cursor 3} {1319680 ps} 0} {{Cursor 4} {616295 ps} 0}
+configure wave -namecolwidth 302
+configure wave -valuecolwidth 392
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {425943 ps} {468 ns}

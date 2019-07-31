@@ -1,0 +1,54 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider AXI_MASTER_TX
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/reset_
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/gen_en_wr
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tdata
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tvalid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tlast
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tuser
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tstrb
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/tx_axis_mac_tready
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/txdata_fifo256x64/wrempty
+add wave -noupdate -divider LMAC2_CORE_FIFO_IF
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/clk
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/fmac_speed
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/fib_tx_mac_data
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/fib_tx_mac_wr
+add wave -noupdate -divider TX_ENCAP_IF
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/clk
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/txfifo_dout
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/wdata
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_encap/rbytes
+add wave -noupdate -divider XGMII_TX_IF
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/xgmii_txd
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/xgmii_txc
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/FMAC_TX_PKT_CNT
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/FMAC_TX_BYTE_CNT
+add wave -noupdate -divider PHY_EMULATOR_TX
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/xgmii_txd
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/phy_emulator_10G/xgmii_txc
+add wave -noupdate -divider CRC
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/tx_mac10g_crc32x64/crc32
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/tx_mac10g_crc32x64/crc32_vld_
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/crc_we_
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/crc_last_
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/crc_clr_
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/tx_10G_wrap/tx_xgmii/crc_cnt
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {697400 ps} 0} {{Cursor 2} {201000 ps} 0} {{Cursor 3} {1043431 ps} 0}
+configure wave -namecolwidth 292
+configure wave -valuecolwidth 135
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {165884 ps} {778133 ps}

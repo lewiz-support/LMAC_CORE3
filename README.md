@@ -2,11 +2,16 @@
 Ethernet MAC IP Core for 100G/50G/40G/25G/10Gbps
 
 -------- July 30, 2019
+
 Initial release of LMAC Core3 code. The code is fully simulated.
 
 Full documentation, test benches, etc. included.
 
 This release is not intended for synthesis. Its code is technology independent.
+
+The documentation (in DOCS directory) should be reviewed first to be familiar with the directory structure.
+Code, test bench, test scripts, etc are in LMAC3_INFO directory
+
 
 ALL Materials are:
 

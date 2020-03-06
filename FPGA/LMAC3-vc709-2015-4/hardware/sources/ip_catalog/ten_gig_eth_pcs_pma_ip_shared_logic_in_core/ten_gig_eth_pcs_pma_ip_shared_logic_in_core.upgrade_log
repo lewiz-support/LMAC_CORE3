@@ -1,0 +1,35 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jan 23 08:29:18 2017
+| Host         : MANTA-RAY running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1761-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ten_gig_eth_pcs_pma_ip_shared_logic_in_core'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ten_gig_eth_pcs_pma_ip_shared_logic_in_core from xilinx.com:ip:ten_gig_eth_pcs_pma:5.0 (Rev. 2) to xilinx.com:ip:ten_gig_eth_pcs_pma:6.0 (Rev. 3)
+
+2. Warnings
+-----------
+
+WARNING: Version 6.0 is a major revision and might require that the core instantiation is updated.
+Please consult the core Product Guide.
+
+
+3. Upgrade messages
+-------------------
+
+Set parameter IEEE_1588 to value None (source 'default')
+Added parameter speed10_25 with value 10Gig (source 'default')
+Added parameter RefClkRate with value 156.25 (source 'default')
+Added parameter TransceiverInExample with value false (source 'default')
+Removed parameter vu_gt_type
+Added parameter vu_gt_type with value GTH (source 'default')
+Set parameter fec to value false (source 'default')
+Set parameter autonegotiation to value false (source 'default')
+

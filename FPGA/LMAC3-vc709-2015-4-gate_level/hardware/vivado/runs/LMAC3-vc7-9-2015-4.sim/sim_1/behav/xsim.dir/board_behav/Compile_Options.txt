@@ -1,0 +1,1 @@
+-wto "473c1d551ac642859131150f7cf23711" --debug "typical" --relax --mt "2" -d "USE_PIPE_SIM=1" -d "SIMULATION=1" -d "USE_DDR3_FIFO=1" -d "USE_XPHY=1" -d "NW_PATH_ENABLE=1" -d "x4Gb=1" -d "sg107E=1" -d "x8=1" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "board_behav" "xil_defaultlib.board" "xil_defaultlib.glbl" -log "elaborate.log" 

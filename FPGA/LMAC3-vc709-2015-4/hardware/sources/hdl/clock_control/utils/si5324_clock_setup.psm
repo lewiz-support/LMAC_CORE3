@@ -1,0 +1,336 @@
+                             ;
+                             ;------------------------------------------------------------------------------------------
+                             ; Copyright © 2012, Xilinx, Inc.
+                             ; This file contains confidential and proprietary information of Xilinx, Inc. and is
+                             ; protected under U.S. and international copyright and other intellectual property laws.
+                             ;------------------------------------------------------------------------------------------
+                             ;
+                             ; Disclaimer:
+                             ; This disclaimer is not a license and does not grant any rights to the materials
+                             ; distributed herewith. Except as otherwise provided in a valid license issued to
+                             ; you by Xilinx, and to the maximum extent permitted by applicable law: (1) THESE
+                             ; MATERIALS ARE MADE AVAILABLE "AS IS" AND WITH ALL FAULTS, AND XILINX HEREBY
+                             ; DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY,
+                             ; INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT,
+                             ; OR FITNESS FOR ANY PARTICULAR PURPOSE; and (2) Xilinx shall not be liable
+                             ; (whether in contract or tort, including negligence, or under any other theory
+                             ; of liability) for any loss or damage of any kind or nature related to, arising
+                             ; under or in connection with these materials, including for any direct, or any
+                             ; indirect, special, incidental, or consequential loss or damage (including loss
+                             ; of data, profits, goodwill, or any type of loss or damage suffered as a result
+                             ; of any action brought by a third party) even if such damage or loss was
+                             ; reasonably foreseeable or Xilinx had been advised of the possibility of the same.
+                             ;
+                             ; CRITICAL APPLICATIONS
+                             ; Xilinx products are not designed or intended to be fail-safe, or for use in any
+                             ; application requiring fail-safe performance, such as life-support or safety
+                             ; devices or systems, Class III medical devices, nuclear facilities, applications
+                             ; related to the deployment of airbags, or any other applications that could lead
+                             ; to death, personal injury, or severe property or environmental damage
+                             ; (individually and collectively, "Critical Applications"). Customer assumes the
+                             ; sole risk and liability of any use of Xilinx products in Critical Applications,
+                             ; subject only to applicable laws and regulations governing limitations on product
+                             ; liability.
+                             ;
+                             ; THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS PART OF THIS FILE AT ALL TIMES.
+                             ;
+                             ;------------------------------------------------------------------------------------------
+                             ;
+                             ;
+                             ;             _  ______ ____  ____  __  __  __
+                             ;            | |/ / ___|  _ \/ ___||  \/  |/ /_
+                             ;            | ' / |   | |_) \___ \| |\/| | '_ \
+                             ;            | . \ |___|  __/ ___) | |  | | (_) )
+                             ;            |_|\_\____|_|   |____/|_|  |_|\___/
+                             ;
+                             ;
+                             ;                PicoBlaze Reference Design.
+                             ;
+                             ;
+                             ; Routines to support the Si5324 Programmable Clock Generator from Silicon Labs.
+                             ;
+                             ; Chris Althouse and Ken Chapman - Xilinx Ltd
+                             ;
+                             ; 12th September 2012
+                             ;
+                             ;
+                             ;     NOTE - This is not a standalone PSM file. Include this file in a program that
+                             ;            then calls these routines and works with the values in scratch pad memory.
+                             ;
+                             ;                INCLUDE "si5324_clock_setup.psm"
+                             ;
+                             ;
+                             ;     IMPORTANT - There are 24 CONSTANT directives in this file must be set correctly
+                             ;                 before you use this file with your program (Please see descriptions below).
+                             ;
+                             ;
+                             ; INTRODUCTION
+                             ; ------------
+                             ;
+                             ; These routines perform the commands to set the Si5324 on the VC709 to take a 114.285
+                             ; input clock from a crystal oscillator and produce low-jitter 156.25 MHz clock.  This
+                             ; file does not include (I2C) communication with the device. All operations are performed
+                             ; using a set of scratch pad memory locations defined below.
+                             ;
+                             ; This file includes descriptions and comments intended to be read in conjunction with the
+                             ; Si5324 data sheet from Silicon Labs. The top of this file defines and describes scratch
+                             ; pad memory locations and some constants that must be defined appropriately to fit in
+                             ; with your main program and the Si5324 device being used. This is followed by a
+                             ; description of the routines that you would be expected to call from your program.
+                             ;
+                             ;
+                             ; This file includes descriptions and comments intended to be read in conjunction with the
+                             ; Si5324 data sheet from Silicon Labs. The initial section of the file defines the scratch
+                             ; pad memory locations that are required
+                             ;
+                             ; The code contained in this file will consume ? instructions of program memory.
+                             ;
+                             ;
+                             ;------------------------------------------------------------------------------------------
+                             ; Registers
+                             ;------------------------------------------------------------------------------------------
+                             ;
+                             ; All registers in the currently active bank are used by these routines.
+                             ;
+                             ; If it is useful to be able to preserve the contents of your registers whilst calling
+                             ; these routines then consider using the 'REGBANK' instruction to switch to the
+                             ; other bank of registers. For example, the following would preserve the contents of
+                             ; all registers in bank 'A'...
+                             ;
+                             ;    REGBANK B
+                             ;    CALL setup_switch_si5324
+                             ;    REGBANK B
+                             ;
+                             ; This technique can be used because all values used or generated by these routines are
+                             ; stored in scratch pad memory locations and no information is passed as register contents.
+                             ; Obviously, in this example the contents of the 'B' registers will be altered and it is
+                             ; important that these registers are available for use throughout the execution of the
+                             ; routines (e.g. check that you do not corrupt them during an interrupt which is another
+                             ; popular use of the 'B' bank).
+                             ;
+                             ;
+                             ; The following registers within the currently active bank are used by these routines....
+                             ;	  vc709_i2c_devices: s0, s1,             s5,     sD and sF
+                             ;    i2c_routines:      s0, s1,             s5         and sF
+                             ;    this program:      s0, s1,             s5, s6, sD and sF
+                             ;
+                             ;
+                             ; IMPORTANT - Register 'sF' is used to control and remember the drive values of the CLK
+                             ;             and DATA signals so its contents MUST NOT be altered between calls to the
+                             ;             various routines used to construct a complete I2C transaction. The routine
+                             ;             called 'I2C_initialise' is typically used before starting any transaction
+                             ;             as it will initialise 'sF' as well as the actual I2C interface.
+                             ;
+                             ;------------------------------------------------------------------------------------------
+                             ; Scratch Pad Memory Locations
+                             ;------------------------------------------------------------------------------------------
+                             ;
+                             ; A total of 20 scratch pad memory locations are required by these routines and are defined
+                             ; by the CONSTANT directives below. It is vital that these memory locations are respected
+                             ; and not corrupted by any other code in your overall program.
+                             ;
+                             ;   Hint - You may prefer to cut and paste these definitions into another part of your
+                             ;          program such that the allocation of all scratch pad memory locations is in
+                             ;          the same area and potentially easier to manage correctly.
+                             ;
+                             ;   Hint - Remember to allocate memory locations that are consistent with your setting of
+                             ;          the 'scratch_pad_memory_size' generic in the hardware design.
+                             ;
+                             ;
+                             ;
+                             ;
+                             ;
+                             ;
+                             ; The Si5324 'Serial Port Registers'
+                             ; ---------------------------------
+                             ;
+                             ; Using I2C communication the it is possible to read or write the 'Registers' inside
+                             ; the Si5324. The contents of ?? of these registers are the
+                             ; focus of the routines contained in this file. The Si5324 data sheet is the principle
+                             ; documentation for the device but hopefully the descriptions contained in this file
+                             ; will be a useful supplement as well as describing the KCPSM6 solution.
+                             ;
+                             ;
+                             ; As before, any memory locations can be allocated but it generally makes sense if
+                             ; adjacent and ascending locations similar to that presented below are specified.
+                             ;
+                              CONSTANT si5324_reg0,   54    ; FREE_RUN
+                              CONSTANT si5324_reg1,   E4    ; CK_PRIOR2,CK_PRIOR1
+                              CONSTANT si5324_reg2,   12    ; BWSEL was 32
+                              CONSTANT si5324_reg3,   15    ; CKSEL_REG
+                              CONSTANT si5324_reg4,   92    ; AUTOSEL_REG
+                              CONSTANT si5324_reg10,  08    ; DSBL2_REG
+                              CONSTANT si5324_reg11,  40    ; PD_CK2
+                              CONSTANT si5324_reg25,  A0    ; N1_HS
+                              CONSTANT si5324_reg31,  00    ; NC1_LS[19:16]
+                              CONSTANT si5324_reg32,  00    ; NC1_LS[15:8]
+                              CONSTANT si5324_reg33,  03    ; NC1_LS[7:0]
+                              CONSTANT si5324_reg40,  C2    ; N2_HS, N2_LS[19:16]
+                              CONSTANT si5324_reg41,  49    ; N2_LS[15:8]
+                              CONSTANT si5324_reg42,  EF    ; N2_LS[7:0]
+                              CONSTANT si5324_reg43,  00    ; N31[18:16]
+                              CONSTANT si5324_reg44,  77    ; N31[15:8]
+                              CONSTANT si5324_reg45,  0B    ; N31[7:0]
+                              CONSTANT si5324_reg46,  00    ; N32[18:16]
+                              CONSTANT si5324_reg47,  77    ; N32[15:8]
+                              CONSTANT si5324_reg48,  0B    ; N32[7:0]
+                              CONSTANT si5324_reg136, 40    ; RST_REG,ICAL
+                              ;
+                              ;
+                              ;------------------------------------------------------------------------------------------
+                              ; Useful constants
+                              ;------------------------------------------------------------------------------------------
+			      CONSTANT rst_out, 04   ;resets driven
+                              ;
+                              ;------------------------------------------------------------------------------------------
+                              ; Initialise the system
+                              ;------------------------------------------------------------------------------------------
+                              ; Initialise Other Functions here
+                              ;
+                              ;
+                              LOAD s6, ff    ; resets
+                              ; End of Initialise Other Functions
+                              ;
+                              ; Initialise I2C
+                              ;       CLK = 1 (via pull-up on board)
+                              ;      DATA = 1 (via pull-up on board)
+                              ;
+                  cold_start: CALL drive_rst
+                              CALL release_rst
+                              CALL I2C_initialise
+                              ;
+                              ;
+                              ;
+                              ;------------------------------------------------------------------------------------------
+                              ; Setup IIC Switch to address Si5324
+                              ;------------------------------------------------------------------------------------------ 
+                              ;
+        setup_switch_si5324 : LOAD sD, iic_bus_7                      ; Load channel number for Si5324 (Ch 7)
+                              CALL PCA9548_mux_write                  ; Write transaction to PCA9548 selecting Ch 7
+                              ;
+                              ;
+                              ; Write to Register 0
+          write_si5324_reg0 : LOAD sB, 00'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg0		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ; Write to Register 1
+          write_si5324_reg1 : LOAD sB, 01'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg1		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ; Write to Register 2
+          write_si5324_reg2 : LOAD sB, 02'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg2		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ; Write to Register 3
+          write_si5324_reg3 : LOAD sB, 03'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg3		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ; Write to Register 4
+          write_si5324_reg4 : LOAD sB, 04'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg4		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ; Write to Register 10
+          write_si5324_reg10 : LOAD sB, 10'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg10		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 11
+          write_si5324_reg11 : LOAD sB, 11'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg11		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 25
+          write_si5324_reg25 : LOAD sB, 25'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg25		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 31
+          write_si5324_reg31 : LOAD sB, 31'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg31		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 32
+          write_si5324_reg32 : LOAD sB, 32'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg32		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 33
+          write_si5324_reg33 : LOAD sB, 33'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg33		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 40
+          write_si5324_reg40 : LOAD sB, 40'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg40		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 41
+          write_si5324_reg41 : LOAD sB, 41'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg41		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 42
+          write_si5324_reg42 : LOAD sB, 42'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg42		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 43
+          write_si5324_reg43 : LOAD sB, 43'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg43		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 44
+          write_si5324_reg44 : LOAD sB, 44'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg44		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ;
+                              ; Write to Register 45
+          write_si5324_reg45 : LOAD sB, 45'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg45		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ; Write to Register 46
+          write_si5324_reg46 : LOAD sB, 46'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg46		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ; Write to Register 47
+          write_si5324_reg47 : LOAD sB, 47'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg47		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ; Write to Register 48
+          write_si5324_reg48 : LOAD sB, 48'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg48		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                              ; Write to Register 136
+          write_si5324_reg136 : LOAD sB, 136'd 			       ; Load sB with register address 
+                              LOAD sD, si5324_reg136		       ; Load sD with data to write to register
+                              CALL Si5324_write                        ; Call Write routine
+                              ;
+                  goto_end :  JUMP end_program
+                              ;
+                              ;
+                  drive_rst : LOAD s6, 00
+                              OUTPUT s6, rst_out
+                              RETURN
+                release_rst : LOAD s6, FF
+                              OUTPUT s6, rst_out
+                              RETURN
+                              ;
+                  end_program : JUMP end_program;
+                              ;------------------------------------------------------------------------------------------
+                              ; End of 'si5324_clock_setup.psm'
+                              ;------------------------------------------------------------------------------------------

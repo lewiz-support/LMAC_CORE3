@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl fifo_generator_v13_0_1  "../../../LMAC3-vc7-9-2015-4.ip_user_files/ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd"
+vhdl fifo_generator_v13_0_1  "../../../LMAC3-vc7-9-2015-4.ip_user_files/ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_sfifo_ip_4x32/sim/br_sfifo_ip_4x32.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_data_fifo_ip_1024x256/sim/x2c_data_fifo_ip_1024x256.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_ctrl_fifo_ip_1024x32/sim/x2c_ctrl_fifo_ip_1024x32.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_bcnt_fifo_ip_256x32/sim/x2c_bcnt_fifo_ip_256x32.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/txfifo_ip_1024x256/sim/txfifo_ip_1024x256.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/pktctrl_fifo_ip_4kx32/sim/pktctrl_fifo_ip_4kx32.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/ipcs_fifo_ip_512x64/sim/ipcs_fifo_ip_512x64.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/fmac_rxfifo_ip_4Kx256/sim/fmac_rxfifo_ip_4Kx256.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_pre_data_fifo_ip_1024x256/sim/br_pre_data_fifo_ip_1024x256.vhd"
+vhdl xil_defaultlib  "../../../LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_pre_ctrl_fifo_ip_1024x40/sim/br_pre_ctrl_fifo_ip_1024x40.vhd"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,204 @@
+2015.4:
+ * Version 6.0 (Rev. 3)
+ * Support for -1L speedgrade in Ultrascale devices
+ * Fix for PRBS11 section of training sequence getting stuck at zero
+ * Removing support for ultrascale plus devices for this product line
+ * Revision change in one or more subcores
+
+2015.3:
+ * Version 6.0 (Rev. 2)
+ * Support for Ultrascale plus devices; the device support is limited to functional simulation only. Implementation and post implementation simulations might not be successful for certain devices.
+ * Added support for xcku095 device family
+ * IP revision number added to HDL module, library, and include file names, to support designs with both locked and upgraded IP instances
+
+2015.2.1:
+ * Version 6.0 (Rev. 1)
+ * No changes
+
+2015.2:
+ * Version 6.0 (Rev. 1)
+ * Allow Autonegotiation FSMs to be recognised correctly by tools
+ * Update to 7Series GTHE2 transceiver parameters
+ * Added synchroniser on pcs_loopback bit of configuration_vector for 32bit cores
+ * Added presets to all Example Design top level registers
+ * Fixed 2x-too-long wait timers in training block for Ultrascale devices
+ * Updated the sim_speedup_control logic to ensure that the correct timer values can always be obtained in the final bitstream
+
+2015.1:
+ * Version 6.0
+ * Product name changed from Ten-Gigabit Ethernet PCS/PMA (10GBASE-R/KR) to 10G Ethernet PCS/PMA (10GBASE-R/KR) for Ethernet naming consistency across the Vivado IP catalog
+ * Switch to use the Async 64/66 Gearbox in the Ultrascale transceivers for 10GBASE-KR support
+ * For Ultrascale devices, use of the Async 64/66 Gearbox has enabled the clocking logic to be simplified in 64-bit data path permutations.  txusrclk2 is now used as the clock source for the data path logic.  Please consult the Product Guide
+ * For Ultrascale devices, added an option to select the transcevier reference clock frequency used by the core
+ * Use a 64-bit interface to the Ultrascale transceiver for 64-bit data path permutations
+ * Added an option to enable the removal of the elastic buffer for all Ultrascale designs
+ * Some pins have been renamed, added and removed to support more features and be more agnostic with clock frequencies. Please consult the Product Guide for details
+ * Replaced a few remaining VHDL RTL files with Verilog to allow pure-Verilog simulations
+ * Added rxrecclk_out port in all configurations
+ * For 10GBASE-KR permutations, added the ability to submit a pending Load XNP Page Data command along with the XNP data, before enabling AutoNegotiation
+ * Added ability to set the DCLK frequency during core configuration. For Ultrascale devices, DCLK must come from a free-running clock source
+ * For 7-Series devices, latency through the transmit path is increased by two cycles of txusrclk2 to a avoid potential, one-off empty indication
+ * Added qpll0reset output port for Ultrascale devices to permutations that have shared logic in the example design.  This port is used to drive the the QPLLRESET input of the GT COMMON
+ * Added automatic enabling of FEC during Autonegotiation, where both link partners have FEC ability and at least one has requested FEC enablement
+ * Now using the Ultrascale GT Wizard Reset Helper Block for all cores on Ultrascale devices
+ * Added preset values and resets for some registers, for completeness
+
+2014.4.1:
+ * Version 5.0 (Rev. 2)
+ * Make it easier for AutoNegotiation Block to lock to and parse incoming data
+ * Update to Ultrascale GT Wizard v1.5
+
+2014.4:
+ * Version 5.0 (Rev. 1)
+ * Use the GT Slip functionality to align Autonegotiation frames - no functional change
+ * Encrypted source files are concatenated together to reduce the number of files and to reduce simulator compile time
+ * Fixed internal core cross clock domain constraints between dclk and the core clock to ease timing closure
+
+2014.3:
+ * Version 5.0
+ * Added new 32-bit datapath option for the core to provide lower utilization and latency
+ * Added the option to remove the RX Elastic Buffer for 32-bit Ultrascale BaseR permutations to enable lower latency. XGMII_RX ports are then clocked by the rxrecclk_out port
+ * Added widgets to the core GUI to allow per-core-instance Transceiver and Reference Clock placement selection for Ultrascale devices
+ * Made the dclk input port available in all configurations, removing the internal generation of such and allowing any period on the dclk input provided by the user. There is no longer a dclk_out output. The dclk input must come from a clock buffer. core_clk156_out can be connected to the dclk input for backward compatibility.
+ * Increased default Transceiver CDR Lock wait time to 37 million UI (from 50000 UI). Requires sim_speedup_control to allow simulation (see next item).
+ * Added sim_speedup_control pin to allow pre- and post-synthesis/implementation simulation speedup. Pin should be tied to constant '0' or '1' in final design. Shortens the transceiver startup time and the BaseKR Autonegotiation Break Link timer.
+ * Fixed behaviour on TX when PCS Loopback is selected (BaseR only). Previous behaviour sent 0x00FF00FF data-type words. Corrected behaviour sends 0x00FF pattern.
+ * Disabled the Master Watchdog when in PCS Loopback mode
+ * Added pma_pmd_type port to core to allow setting of the associated register when Shared Logic in Core is selected (BaseR only). Should be tied to a constant value.
+ * Added pipeline register to the Training block coefficient interaction calculations, to ease timing. No functional change.
+ * Made the core_status[1] status bit synchronous to the core clock domain. It was previous synchronous to the rxusrclk2 domain.
+ * For VHDL projects, the top level VHDL file for the core is now compiled into the default library (named xil_defaultlib unless overridden by the user).  All other core VHDL source remains in the core specific library (ten_gig_eth_pcs_pma_v6_0 for this core version).  This makes the core consistent with other Xilinx IP.
+ * Fixed incorrect directory location of some example design files when Shared Logic in Example Design is selected. Files moved from 'imports/<corename>/synth' to 'imports/<corename>/example_design/support'
+ * The directory path to the UltraScale FPGAs Transceivers Wizard output products has been shortened
+ * Input port default tie-off values for IP Integrator have been added to signal_detect and tx_fault, changed to logic 1 for reset_counter_done, and removed from the GT Quad to GT Channel clock ports (which must be connected)
+ * Updated to use the latest GT Ultrascale Wizard
+ * Disabled -1L device support for Ultrascale
+ * Added support for Zync-7000 and 7-Series Defense-grade parts
+
+2014.2:
+ * Version 4.1 (Rev. 2)
+ * Updated to use the latest GT Ultrascale Wizard
+ * Fixed an issue on the GUI symbol where the port gt0_dmonitorout did not appear in the transcevier_debug bus interface when targeting the GTHE2 transcevier
+ * Fixed an issue in the core GUI customization code which caused an error to appear in the Vivado Messages window when the GUI was first opened
+
+2014.1:
+ * Version 4.1 (Rev. 1)
+ * Virtex UltraScale Pre-Production support
+ * Fixed an issue in Verilog Vivado projects for BASE-KR with Auto-negotiation enabled and no MDIO Management, where Link Training would not start automatically (AR 59904)
+ * Fixed an issue where a 'soft' PMA or PCS reset would cause the MDIO interface logic to be reset, possibly during an MDIO access, and so possibly missing the MDIO operation (AR 59910)
+ * Added a 750ms watchdog timer to the Block level which will reset the RX side of the transceiver if PCS Block Lock is not attained within 750ms (AR 59911)
+ * Added ASYNC_REG attributes to additional registers to enable better packing of synchroniser register stages
+ * Ultrascale only - Added progdivreset control for BASE-R cores and added BUF_GT reset to the RXUSRCLK path BUFG_GT
+ * Ultrascale only - Changed Core PCS Reset to toggle the transceiver PCS Resets instead of the progdivresets
+ * Ultrascale only - Edited XDC create_clock constraints to work with the latest Vivado tools which now trace clock generation through the GTHE3_CHANNEL block
+ * Changed some internal register names to allow MultiCyclePath constraints from the RX Decoder to RX Elastic Buffer to take effect and to ease timing closure
+ * Added additional MultiCyclePath constraints to catch a few paths which were being timed at full rate to ease timing closure
+ * Removed an unecessary constraint on refclk_n clock pin, in the ooc.xdc file.
+ * Moved transceiver refclk definition to the core XDC file when Shared Logic is selected
+ * Fixed typo in the core_to_gt_drp interface for the core_to_gt_drpaddr port to fix the cores GUI symbol and connectivity in IP Integrator designs
+ * Added dependency code to all interfaces to to fix the cores GUI symbol in IP Integrator designs
+ * Added tie-off defaults for DRP input ports, for IP Integrator designs only
+ * Netlists created by write_verilog and write_vhdl are IEEE P1735 encrypted, with keys for supported simulators so that netlist simulation can still be done
+ * Enable third party synthesis tools to read encrypted netlists (but not source HDL)
+ * Reduced the number of Warnings from Vivado when using this core
+ * Added synchronizers to the (constant) timer_125us_cycles value to stop DRC violations
+ * Core GUI updated to include a message about BASE-R being a free unlicensed core
+ * Internal device family name change, no functional changes
+
+2013.4:
+ * Version 4.1
+ * Minor up-version because new optional transceiver debug ports are added
+ * All port changes are documented in the core Product Guide PG068.
+ * Connected signal_detect input to GTRXRESET in BASER configuration
+ * Fixed PRBS31 enabling on GTHE3
+ * Fixed 125us Timer setting in Example Designs for cores with no MDIO interface (AR58069)
+ * Reinstated details in GUI of what logic will be shared when Shared Logic is selected
+ * Merged the BaseR-only and the general transceiver debug interfaces in schematic component view
+ * Kintex UltraScale Pre-Production support
+ * Reinstated master reset usage on other resets in shared clock and reset block (VHDL only) (AR58498)
+
+2013.3:
+ * Version 4.0
+ * Virtex-7, Kintex-7 and Zynq-7000 moved to Production status
+ * Added GUI option to include or exclude shareable logic resources in the core. Port changes on core.
+ * Added optional transceiver control and status ports.
+ * New ports added to allow user access to transceiver DRP ports.
+ * All port changes are documented in the core Product Guide PG068.
+ * PCS Block Lock FSM rewritten to remove the corner-case failure in UNH test 49.3.3
+ * AutoNegotiation RX block fixed for Consistency Match issue -: C.M. was not detected if first 3 identical frames received all had Ack set. Very unlikely to occur in real-world application.
+ * Main core reset now also resets all PMA registers to defaults
+ * Revised requirement for DCLK to be 1/2 rate of clk156. DCLK now has to be driven directly by clk156.
+ * RX Elastic Buffer doubled in depth and midpoint set to the true midpoint, to enable larger Jumbo Frames to be received without issue. There is now no state where the Elastic Buffer will not add IDLEs or delete IDLEs/LFs when it gets the opportunity.
+
+2013.2_AR58656:
+ * Version 3.0 (Rev. 2)
+ * Fixed AR58660 - Corrected two clock domain crossing synchronization modules
+ * Fixed AR58412 - Updated the RXRESETTIME transceiver CDR lock timer values
+ * Fixed AR58659 - Corrected the period constraint for the dclk (transceiver DRP clock frequency) in the Out-of-Context XDC file
+
+2013.2:
+ * Version 3.0 (Rev. 1)
+ * AN block will now send a NULL page without user-interaction, if LD ADV NP bit (bit15) is not set to '1'
+ * BIAS_CFG setting on GTHE2_COMMON block now follows AR51625. Also set RX_DFE_KL_CFG on the GTHE2_CHANNEL block to match recommended AR51625 setting.
+ * Constraints processing order changed for core-specific XDC files
+ * set_max_delay constraints being silently dropped
+ * (AR55728) - Incorrect DRP address being used for RX PRBS31 Error Counter in V7 GTHE2
+ * Comments in RTL causing problems for IUS parser (Cadence simulator)
+ * Possibility of AutoNegotiation restarting several times before settling
+ * (AR55676) - Possibility of returning incorrect value from RX PRBS31 Error Counter
+ * (AR55676) - Possibility of corrupting MDIO operations and registers when using RX PRBS31 Error Checking
+ * Support for Virtex7 GTHE2-specific Training coefficient control - all 3 Coefficients now have dynamic ranges
+ * Fixed AR55235 - no longer seeing marginal timing
+ * Fixed AR52531 - no longer seeing timing errors on paths to and from Transceiver
+
+2013.1:
+ * Version 3.0
+ * Change in core and example design hierarchy and constraints - this core is not compatible with previous versions of the core. Please consult the Product Guide for more information.
+ * Changes in transceiver transmit coefficient handling during Link Training
+ * Training Interface disconnected from GT DRP interface
+
+(c) Copyright 2009 - 2015 Xilinx, Inc. All rights reserved.
+
+This file contains confidential and proprietary information
+of Xilinx, Inc. and is protected under U.S. and
+international copyright and other intellectual property
+laws.
+
+DISCLAIMER
+This disclaimer is not a license and does not grant any
+rights to the materials distributed herewith. Except as
+otherwise provided in a valid license issued to you by
+Xilinx, and to the maximum extent permitted by applicable
+law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+(2) Xilinx shall not be liable (whether in contract or tort,
+including negligence, or under any other theory of
+liability) for any loss or damage of any kind or nature
+related to, arising under or in connection with these
+materials, including for any direct, or any indirect,
+special, incidental, or consequential loss or damage
+(including loss of data, profits, goodwill, or any type of
+loss or damage suffered as a result of any action brought
+by a third party) even if such damage or loss was
+reasonably foreseeable or Xilinx had been advised of the
+possibility of the same.
+
+CRITICAL APPLICATIONS
+Xilinx products are not designed or intended to be fail-
+safe, or for use in any application requiring fail-safe
+performance, such as life-support or safety devices or
+systems, Class III medical devices, nuclear facilities,
+applications related to the deployment of airbags, or any
+other applications that could lead to death, personal
+injury, or severe property or environmental damage
+(individually and collectively, "Critical
+Applications"). Customer assumes the sole risk and
+liability of any use of Xilinx products in Critical
+Applications, subject only to applicable laws and
+regulations governing limitations on product liability.
+
+THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+PART OF THIS FILE AT ALL TIMES.

@@ -1,0 +1,634 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Jan 18 11:42:23 2017
+# Process ID: 19112
+# Current directory: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/impl_1
+# Command line: vivado.exe -log LMAC3_vc709_2015_4.vdi -applog -messageDb vivado.pb -mode batch -source LMAC3_vc709_2015_4.tcl -notrace
+# Log file: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/impl_1/LMAC3_vc709_2015_4.vdi
+# Journal file: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source LMAC3_vc709_2015_4.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/br_pre_ctrl_fifo_ip_1024x40_synth_1/br_pre_ctrl_fifo_ip_1024x40.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/br_pre_ctrl_fifo/br_pre_ctrl_fifo_ip_1024x40'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/br_pre_data_fifo_ip_1024x256_synth_1/br_pre_data_fifo_ip_1024x256.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/br_pre_data_fifo/br_pre_data_fifo_ip_1024x256'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/br_sfifo_ip_4x32_synth_1/br_sfifo_ip_4x32.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/tcore_byte_reordering/rf_sfifo/br_sfifo_ip_4x32'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/pktctrl_fifo_ip_4kx32_synth_1/pktctrl_fifo_ip_4kx32.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/pkt_ctrl_fifo/pktctrl_fifo_ip_4kx32'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/ipcs_fifo_ip_512x64_synth_1/ipcs_fifo_ip_512x64.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/ipcs_fifo/ipcs_fifo_ip_512x64'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/fmac_rxfifo_ip_4Kx256_synth_1/fmac_rxfifo_ip_4Kx256.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/rx_fifo/fmac_rxfifo_ip_4Kx256'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/txfifo_ip_1024x256_synth_1/txfifo_ip_1024x256.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/txfifo_1024x256/txfifo_ip_1024x256'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/x2c_bcnt_fifo_ip_256x32_synth_1/x2c_bcnt_fifo_ip_256x32.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_bcnt_fifo/x2c_bcnt_fifo_ip_256x32'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/x2c_ctrl_fifo_ip_1024x32_synth_1/x2c_ctrl_fifo_ip_1024x32.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_ctrl_fifo/x2c_ctrl_fifo_ip_1024x32'
+INFO: [Project 1-454] Reading design checkpoint 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/x2c_data_fifo_ip_1024x256_synth_1/x2c_data_fifo_ip_1024x256.dcp' for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_data_fifo/x2c_data_fifo_ip_1024x256'
+INFO: [Netlist 29-17] Analyzing 562 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.4
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xdc] for cell 'network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xdc:70]
+all_fanout: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1511.957 ; gain = 722.434
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xdc] for cell 'network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_pre_ctrl_fifo_ip_1024x40/br_pre_ctrl_fifo_ip_1024x40/br_pre_ctrl_fifo_ip_1024x40.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/br_pre_ctrl_fifo/br_pre_ctrl_fifo_ip_1024x40/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_pre_ctrl_fifo_ip_1024x40/br_pre_ctrl_fifo_ip_1024x40/br_pre_ctrl_fifo_ip_1024x40.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/br_pre_ctrl_fifo/br_pre_ctrl_fifo_ip_1024x40/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_pre_data_fifo_ip_1024x256/br_pre_data_fifo_ip_1024x256/br_pre_data_fifo_ip_1024x256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/br_pre_data_fifo/br_pre_data_fifo_ip_1024x256/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_pre_data_fifo_ip_1024x256/br_pre_data_fifo_ip_1024x256/br_pre_data_fifo_ip_1024x256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/br_pre_data_fifo/br_pre_data_fifo_ip_1024x256/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_sfifo_ip_4x32/br_sfifo_ip_4x32/br_sfifo_ip_4x32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/tcore_byte_reordering/rf_sfifo/br_sfifo_ip_4x32/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/br_sfifo_ip_4x32/br_sfifo_ip_4x32/br_sfifo_ip_4x32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/byte_reordering_wrap/tcore_byte_reordering/rf_sfifo/br_sfifo_ip_4x32/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/pktctrl_fifo_ip_4kx32/pktctrl_fifo_ip_4kx32/pktctrl_fifo_ip_4kx32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/pkt_ctrl_fifo/pktctrl_fifo_ip_4kx32/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/pktctrl_fifo_ip_4kx32/pktctrl_fifo_ip_4kx32/pktctrl_fifo_ip_4kx32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/pkt_ctrl_fifo/pktctrl_fifo_ip_4kx32/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/ipcs_fifo_ip_512x64/ipcs_fifo_ip_512x64/ipcs_fifo_ip_512x64.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/ipcs_fifo/ipcs_fifo_ip_512x64/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/ipcs_fifo_ip_512x64/ipcs_fifo_ip_512x64/ipcs_fifo_ip_512x64.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/ipcs_fifo/ipcs_fifo_ip_512x64/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/fmac_rxfifo_ip_4Kx256/fmac_rxfifo_ip_4Kx256/fmac_rxfifo_ip_4Kx256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/rx_fifo/fmac_rxfifo_ip_4Kx256/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/fmac_rxfifo_ip_4Kx256/fmac_rxfifo_ip_4Kx256/fmac_rxfifo_ip_4Kx256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/rx_fifo/fmac_rxfifo_ip_4Kx256/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/txfifo_ip_1024x256/txfifo_ip_1024x256/txfifo_ip_1024x256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/txfifo_1024x256/txfifo_ip_1024x256/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/txfifo_ip_1024x256/txfifo_ip_1024x256/txfifo_ip_1024x256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/core/txfifo_1024x256/txfifo_ip_1024x256/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_bcnt_fifo_ip_256x32/x2c_bcnt_fifo_ip_256x32/x2c_bcnt_fifo_ip_256x32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_bcnt_fifo/x2c_bcnt_fifo_ip_256x32/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_bcnt_fifo_ip_256x32/x2c_bcnt_fifo_ip_256x32/x2c_bcnt_fifo_ip_256x32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_bcnt_fifo/x2c_bcnt_fifo_ip_256x32/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_ctrl_fifo_ip_1024x32/x2c_ctrl_fifo_ip_1024x32/x2c_ctrl_fifo_ip_1024x32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_ctrl_fifo/x2c_ctrl_fifo_ip_1024x32/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_ctrl_fifo_ip_1024x32/x2c_ctrl_fifo_ip_1024x32/x2c_ctrl_fifo_ip_1024x32.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_ctrl_fifo/x2c_ctrl_fifo_ip_1024x32/U0'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_data_fifo_ip_1024x256/x2c_data_fifo_ip_1024x256/x2c_data_fifo_ip_1024x256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_data_fifo/x2c_data_fifo_ip_1024x256/U0'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.srcs/sources_1/ip/x2c_data_fifo_ip_1024x256/x2c_data_fifo_ip_1024x256/x2c_data_fifo_ip_1024x256.xdc] for cell 'network_path_inst_0/LMAC_TOP_SYNTH/LMAC_CORE_TOP/x2c_ctrl/x2c_data_fifo/x2c_data_fifo_ip_1024x256/U0'
+Parsing XDC File [C:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/constraints/v7_LMAC3_base.xdc]
+Finished Parsing XDC File [C:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/constraints/v7_LMAC3_base.xdc]
+Parsing XDC File [C:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/constraints/v7_LMAC3_bit_rev1_0.xdc]
+Finished Parsing XDC File [C:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/constraints/v7_LMAC3_bit_rev1_0.xdc]
+Parsing XDC File [C:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/constraints/v7_LMAC3_xgemac_xphy.xdc]
+Finished Parsing XDC File [C:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/constraints/v7_LMAC3_xgemac_xphy.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/br_pre_ctrl_fifo_ip_1024x40_synth_1/br_pre_ctrl_fifo_ip_1024x40.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/br_pre_data_fifo_ip_1024x256_synth_1/br_pre_data_fifo_ip_1024x256.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/br_sfifo_ip_4x32_synth_1/br_sfifo_ip_4x32.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/pktctrl_fifo_ip_4kx32_synth_1/pktctrl_fifo_ip_4kx32.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/ipcs_fifo_ip_512x64_synth_1/ipcs_fifo_ip_512x64.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/fmac_rxfifo_ip_4Kx256_synth_1/fmac_rxfifo_ip_4Kx256.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/txfifo_ip_1024x256_synth_1/txfifo_ip_1024x256.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/x2c_bcnt_fifo_ip_256x32_synth_1/x2c_bcnt_fifo_ip_256x32.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/x2c_ctrl_fifo_ip_1024x32_synth_1/x2c_ctrl_fifo_ip_1024x32.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/x2c_data_fifo_ip_1024x256_synth_1/x2c_data_fifo_ip_1024x256.dcp'
+Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_clocks.xdc] for cell 'network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst'
+Finished Parsing XDC File [c:/SUNNY2/LMAC3-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_clocks.xdc] for cell 'network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 79 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 47 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 28 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 2 instances
+
+link_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.789 ; gain = 1300.121
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-86] Your Implementation license expires in 17 day(s)
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -18 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.406 . Memory (MB): peak = 1514.789 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: ffbc0e42
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 99 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 2ca016d0
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1514.789 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 392 cells.
+Phase 2 Constant Propagation | Checksum: a45de31f
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1514.789 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 3666 unconnected nets.
+INFO: [Opt 31-11] Eliminated 2686 unconnected cells.
+Phase 3 Sweep | Checksum: 1b4c34259
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1514.789 ; gain = 0.000
+
+Phase 4 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 4 Constant Propagation | Checksum: ffd91274
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1514.789 ; gain = 0.000
+
+Phase 5 Sweep
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 5 Sweep | Checksum: 6f03908e
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1514.789 ; gain = 0.000
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1514.789 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 6f03908e
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1514.789 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 56 BRAM(s) out of a total of 59 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 33 newly gated: 0 Total Ports: 118
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: 156b4347f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 156b4347f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.145 ; gain = 389.355
+INFO: [Common 17-83] Releasing license: Implementation
+53 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:44 . Memory (MB): peak = 1904.145 ; gain = 389.355
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1904.145 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/impl_1/LMAC3_vc709_2015_4_drc_opted.rpt.
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-86] Your Implementation license expires in 17 day(s)
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -18 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-20] Rule violation (PORTPROP-2) selectio_diff_term - The port clk_ref_n has an invalid DIFF_TERM property value. For the target architecture, IOSTANDARD value DIFF_SSTL15 does not support on-chip input differential termination. The DIFF_TERM property value will be ignored.
+WARNING: [DRC 23-20] Rule violation (PORTPROP-2) selectio_diff_term - The port clk_ref_p has an invalid DIFF_TERM property value. For the target architecture, IOSTANDARD value DIFF_SSTL15 does not support on-chip input differential termination. The DIFF_TERM property value will be ignored.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.156 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 Pre-Place Cells
+Phase 1.1.1 Pre-Place Cells | Checksum: 01e91f51
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1.1.2 IO and Clk Clean Up
+Phase 1.1.2 IO and Clk Clean Up | Checksum: 01e91f51
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 1.1.3 Implementation Feasibility check On IDelay
+Phase 1.1.3 Implementation Feasibility check On IDelay | Checksum: 01e91f51
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 1.1.4 Commit IO Placement
+Phase 1.1.4 Commit IO Placement | Checksum: b2b03964
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 171d8a5ef
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Init Lut Pin Assignment
+Phase 1.2.1.1 Init Lut Pin Assignment | Checksum: 262438e5e
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 1.2.1 Place Init Design | Checksum: 1876490ab
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 1.2 Build Placer Netlist Model | Checksum: 1876490ab
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 1.3 Constrain Clocks/Macros
+
+Phase 1.3.1 Constrain Global/Regional Clocks
+Phase 1.3.1 Constrain Global/Regional Clocks | Checksum: 1876490ab
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1876490ab
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1876490ab
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 26b419cbe
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:50 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 26b419cbe
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:50 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a8a21f50
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:01 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1688a8347
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:02 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 1688a8347
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:02 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1e6f9d7f0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:05 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 1e6f9d7f0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:05 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.7 Small Shape Detail Placement
+
+Phase 3.7.1 Commit Small Macros and Core Logic
+
+Phase 3.7.1.1 Commit Slice Clusters
+Phase 3.7.1.1 Commit Slice Clusters | Checksum: 26ab0047b
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:20 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 3.7.1 Commit Small Macros and Core Logic | Checksum: 26ab0047b
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:20 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.7.2 Clock Restriction Legalization for Leaf Columns
+Phase 3.7.2 Clock Restriction Legalization for Leaf Columns | Checksum: 26ab0047b
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:20 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins
+Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 26ab0047b
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:21 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 3.7 Small Shape Detail Placement | Checksum: 26ab0047b
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:21 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 1b7d38238
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:23 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1b7d38238
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:23 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+
+Phase 4.1.1 callUpdateTimingBeforePCO
+Phase 4.1.1 callUpdateTimingBeforePCO | Checksum: 13cc16745
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:29 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.1.2 updateClock Trees: PCOPT
+Phase 4.1.2 updateClock Trees: PCOPT | Checksum: 13cc16745
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:30 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.1.3 Post Placement Optimization
+
+Phase 4.1.3.1 PCOPT Shape updates
+
+Phase 4.1.3.1.1 removeOptionalFFsFromShapes
+Phase 4.1.3.1.1 removeOptionalFFsFromShapes | Checksum: 13cc16745
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:30 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.1.3.1.2 deleteLutnmShapes
+
+Phase 4.1.3.1.2.1 deleteShapes
+Phase 4.1.3.1.2.1 deleteShapes | Checksum: 177b1cbe4
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:30 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 4.1.3.1.2 deleteLutnmShapes | Checksum: 177b1cbe4
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:30 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 4.1.3.1 PCOPT Shape updates | Checksum: 177b1cbe4
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:30 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.1.3.2 Post Placement Timing Optimization
+
+Phase 4.1.3.2.1 Restore Best Placement
+Phase 4.1.3.2.1 Restore Best Placement | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:35 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.515. For the most accurate timing information please run report_timing.
+Phase 4.1.3.2 Post Placement Timing Optimization | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:35 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 4.1.3 Post Placement Optimization | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:35 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:35 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:36 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.3 Post Placement Cleanup
+Phase 4.3 Post Placement Cleanup | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:36 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.4 Placer Reporting
+
+Phase 4.4.1 Restore STA
+Phase 4.4.1 Restore STA | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:36 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 4.4 Placer Reporting | Checksum: 1042d8991
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:36 . Memory (MB): peak = 1904.145 ; gain = 0.000
+
+Phase 4.5 Final Placement Cleanup
+Phase 4.5 Final Placement Cleanup | Checksum: 13cba1162
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:36 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13cba1162
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:37 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Ending Placer Task | Checksum: ee71aff0
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:37 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+72 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1904.145 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1904.145 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 1904.145 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.313 . Memory (MB): peak = 1904.145 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-86] Your Implementation license expires in 17 day(s)
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -18 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+Phase 1 Physical Synthesis Initialization | Checksum: fb1419bc
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Ending Physical Synthesis Task | Checksum: d8b1c9d1
+----- Checksum: : ca520319 : 0e5fc6b8 
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1904.145 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+80 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 1904.145 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1904.145 ; gain = 0.000
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-86] Your Implementation license expires in 17 day(s)
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -18 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-20] Rule violation (PORTPROP-2) selectio_diff_term - The port clk_ref_n has an invalid DIFF_TERM property value. For the target architecture, IOSTANDARD value DIFF_SSTL15 does not support on-chip input differential termination. The DIFF_TERM property value will be ignored.
+WARNING: [DRC 23-20] Rule violation (PORTPROP-2) selectio_diff_term - The port clk_ref_p has an invalid DIFF_TERM property value. For the target architecture, IOSTANDARD value DIFF_SSTL15 does not support on-chip input differential termination. The DIFF_TERM property value will be ignored.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 5f49949 ConstDB: 0 ShapeSum: ef73761 RouteDB: e5fc6b8
+
+Phase 1 Build RT Design
+Using Offlined NodeGraph Builder
+Phase 1 Build RT Design | Checksum: 11e69f712
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:43 . Memory (MB): peak = 2100.395 ; gain = 196.250
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 11e69f712
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:44 . Memory (MB): peak = 2100.395 ; gain = 196.250
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 11e69f712
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:44 . Memory (MB): peak = 2108.074 ; gain = 203.930
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1b11515d3
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:00:59 . Memory (MB): peak = 2195.957 ; gain = 291.813
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.560  | TNS=0.000  | WHS=-0.430 | THS=-1169.587|
+
+Phase 2 Router Initialization | Checksum: 12f7816f6
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:01:04 . Memory (MB): peak = 2195.957 ; gain = 291.813
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1c82b8b15
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:20 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 5146
+ Number of Nodes with overlaps = 160
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 23dc4df2a
+
+Time (s): cpu = 00:02:55 ; elapsed = 00:01:45 . Memory (MB): peak = 2246.340 ; gain = 342.195
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.396  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 133595800
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:46 . Memory (MB): peak = 2246.340 ; gain = 342.195
+Phase 4 Rip-up And Reroute | Checksum: 133595800
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:46 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: fc162e92
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:47 . Memory (MB): peak = 2246.340 ; gain = 342.195
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.396  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: fc162e92
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:47 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: fc162e92
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:47 . Memory (MB): peak = 2246.340 ; gain = 342.195
+Phase 5 Delay and Skew Optimization | Checksum: fc162e92
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:48 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Update Timing
+Phase 6.1 Update Timing | Checksum: 146a72a93
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:49 . Memory (MB): peak = 2246.340 ; gain = 342.195
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.396  | TNS=0.000  | WHS=0.023  | THS=0.000  |
+
+Phase 6 Post Hold Fix | Checksum: 13d83077f
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:50 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 7 Timing Verification
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 140b8e567
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:54 . Memory (MB): peak = 2246.340 ; gain = 342.195
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.396  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 7 Timing Verification | Checksum: 140b8e567
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:54 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.72575 %
+  Global Horizontal Routing Utilization  = 2.0106 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 140b8e567
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:54 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 140b8e567
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:01:54 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1c7ee4690
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:57 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.397  | TNS=0.000  | WHS=0.024  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 11 Post Router Timing | Checksum: 1dd33c9cd
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:05 . Memory (MB): peak = 2246.340 ; gain = 342.195
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:05 . Memory (MB): peak = 2246.340 ; gain = 342.195
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+97 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:32 ; elapsed = 00:02:08 . Memory (MB): peak = 2246.340 ; gain = 342.195
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:37 ; elapsed = 00:00:29 . Memory (MB): peak = 2246.340 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 2246.340 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/SUNNY2/LMAC3-vc709-2015-4/hardware/vivado/runs/LMAC3-vc7-9-2015-4.runs/impl_1/LMAC3_vc709_2015_4_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2246.340 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2246.340 ; gain = 0.000
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+report_power: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 2246.340 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 18 11:49:07 2017...

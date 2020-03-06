@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Jan 18 10:20:38 2017
+# Process ID: 29916
+# Current directory: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/LMAC3-vc7-9-2015-4/LMAC3-vc7-9-2015-4.runs/pktctrl_fifo_ip_4kx32_synth_1
+# Command line: vivado.exe -log pktctrl_fifo_ip_4kx32.vds -mode batch -messageDb vivado.pb -notrace -source pktctrl_fifo_ip_4kx32.tcl
+# Log file: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/LMAC3-vc7-9-2015-4/LMAC3-vc7-9-2015-4.runs/pktctrl_fifo_ip_4kx32_synth_1/pktctrl_fifo_ip_4kx32.vds
+# Journal file: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/LMAC3-vc7-9-2015-4/LMAC3-vc7-9-2015-4.runs/pktctrl_fifo_ip_4kx32_synth_1\vivado.jou
+#-----------------------------------------------------------
+source pktctrl_fifo_ip_4kx32.tcl -notrace

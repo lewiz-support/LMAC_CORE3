@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Jan 18 10:19:26 2017
+# Process ID: 22780
+# Current directory: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/LMAC3-vc7-9-2015-4/LMAC3-vc7-9-2015-4.runs/br_pre_data_fifo_ip_1024x256_synth_1
+# Command line: vivado.exe -log br_pre_data_fifo_ip_1024x256.vds -mode batch -messageDb vivado.pb -notrace -source br_pre_data_fifo_ip_1024x256.tcl
+# Log file: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/LMAC3-vc7-9-2015-4/LMAC3-vc7-9-2015-4.runs/br_pre_data_fifo_ip_1024x256_synth_1/br_pre_data_fifo_ip_1024x256.vds
+# Journal file: C:/SUNNY2/LMAC3-vc709-2015-4/hardware/LMAC3-vc7-9-2015-4/LMAC3-vc7-9-2015-4.runs/br_pre_data_fifo_ip_1024x256_synth_1\vivado.jou
+#-----------------------------------------------------------
+source br_pre_data_fifo_ip_1024x256.tcl -notrace

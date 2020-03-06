@@ -20,6 +20,7 @@ License: GNU Lesser GPL 2.1 or later (as published by the Free Software Foundati
 Copyright (C) 2019 LeWiz Communications, Inc.
 
 -------- March 06, 2020
+
  VC709 FPGA Implementation of LMAC_CORE3.
 
 

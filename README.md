@@ -3,7 +3,7 @@ Ethernet MAC IP Core for 100G/50G/40G/25G/10Gbps
 
 -------- APRIL 2, 2023
 
-All materials for LMAC_CORE3 are released under Apache 2.0 license
+All materials for LMAC_CORE3 are now released under Apache 2.0 license
 
 http://www.apache.org/licenses/LICENSE-2.0
 

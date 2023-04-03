@@ -1,6 +1,13 @@
 # LMAC_CORE3
 Ethernet MAC IP Core for 100G/50G/40G/25G/10Gbps
 
+-------- APRIL 2, 2023
+
+All materials for LMAC_CORE3 are released under Apache 2.0 license
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+
 -------- July 30, 2019
 
 Initial release of LMAC Core3 code. The code is fully simulated.
